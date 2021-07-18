@@ -2,4 +2,125 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
 }
+
+body {
+  position: relative;
+}
+
+.orange {
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1;
+  width: 55vw;
+  height: 150vh;
+}
+
+header {
+  nav {
+    width: 100%;
+    ul {
+      padding: 2rem;
+      width: 70%;
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      li {
+        font-size: 1.2rem;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+
+  section.left {
+    // flex grow、shirk、basis
+    padding: 2rem;
+    flex: 3 1 500px;
+
+    h1 {
+      font-size: 4rem;
+      color: #ec9523;
+    }
+    p {
+      font-size: 1.2rem;
+
+      padding: 1rem 0rem;
+    }
+  }
+  section.right {
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      width: 40vh;
+      height: 40vh;
+      border-radius: 50%;
+      position: absolute;
+      top: 36vh;
+      right: 25vw;
+    }
+  }
+}
+
+footer {
+  a {
+    padding: 1.5rem;
+  }
+}
+
+.active {
+  color: orange;
+}
+
+@media screen and (max-width: 1100px) {
+  .orange {
+    // opacity = 透明度
+    opacity: 0.5;
+  }
+
+  header {
+    nav {
+      ul {
+        flex-direction: column;
+        width: 38%;
+
+        li {
+          padding: 1rem 0rem;
+          border-bottom: 2px solid gray;
+        }
+      }
+    }
+  }
+
+  main {
+    section.right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      img {
+        position: static;
+        width: 50vw;
+        height: 50vw;
+      }
+    }
+  }
+}
+
+// second page
+
+// .picture {
+//   .Robin {
+//     width: 30vw;
+//     height: 18vw;
+//   }
+// }
