@@ -45,7 +45,7 @@ main {
   section.left {
     // flex grow、shirk、basis
     padding: 2rem;
-    flex: 3 1 500px;
+    flex: 1.8 1 500px;
 
     h1 {
       font-size: 4rem;
@@ -69,11 +69,51 @@ main {
       right: 25vw;
     }
   }
+
+  section.table {
+    padding: 1rem;
+    flex: 3 1 500px;
+    table {
+      border-collapse: collapse;
+      // 這裡沒設定的話 就不會有分隔線
+      tr {
+        border-bottom: 2px solid gray;
+        transition: all 0.3s ease;
+        td {
+          padding: 1rem;
+        }
+        &:hover {
+          background-color: #ecb062;
+        }
+      }
+    }
+  }
+  section.picture {
+    flex: 1 1 600px;
+    position: relative;
+
+    img {
+      width: 38vw;
+      height: 48vh;
+      position: absolute;
+      bottom: 80px;
+    }
+    div.orangeRect {
+      width: 38vw;
+      height: 48vh;
+      background-color: #ecdaa7;
+      position: absolute;
+      top: 30px;
+      left: 70px;
+      z-index: -1;
+    }
+  }
 }
 
 footer {
+  padding-top: 3rem;
   a {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }
 
@@ -113,14 +153,19 @@ footer {
         height: 50vw;
       }
     }
+    section.picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 90vw;
+        height: 65vh;
+      }
+      div.orangeRect {
+        display: none;
+      }
+    }
   }
 }
 
 // second page
-
-// .picture {
-//   .Robin {
-//     width: 30vw;
-//     height: 18vw;
-//   }
-// }
