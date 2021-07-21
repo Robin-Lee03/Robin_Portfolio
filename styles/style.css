@@ -119,8 +119,6 @@ main section.picture {
 main section.picture img {
   width: 38vw;
   height: 48vh;
-  position: absolute;
-  bottom: 80px;
 }
 
 main section.picture div.orangeRect {
